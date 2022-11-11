@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1668017839489_435_propertyChange",
+    "fileType": "change",
+    "changeType": "propertyChange",
+    "moduleName": "",
+    "reference": "br.com.dellavolpe.zuifimovcxfil",
+    "packageName": "",
+    "content": {
+        "property": "width",
+        "newValue": "130px"
+    },
+    "selector": {
+        "id": "br.com.dellavolpe.zuifimovcxfil::sap.suite.ui.generic.template.ListReport.view.ListReport::MovimentCxFilial--listReport-Zdocestorno",
+        "idIsLocal": false,
+        "type": "sap.m.Column"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/br.com.dellavolpe.zuifimovcxfil/changes/",
+    "projectId": "",
+    "creation": 1668018182105,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.84.23",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}
