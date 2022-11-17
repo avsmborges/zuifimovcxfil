@@ -4,7 +4,7 @@ sap.ui.define([],
         return {
             openAppTab: function (oEvt) {
                 var oNavigationController = this.extensionAPI.getNavigationController();
-                oNavigationController.navigateExternal("Action-" + oEvt.getSource().getId().substring(oEvt.getSource().getId().lastIndexOf("--") + 2));
+                oNavigationController.navigateExternal(oEvt.getSource().getId().substring(oEvt.getSource().getId().lastIndexOf("--") + 2));
             },
 
             _refreshTable: function () {
