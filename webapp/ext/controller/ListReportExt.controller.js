@@ -5,7 +5,7 @@ sap.ui.define(["sap/m/MessageBox"],
 
             openAppTab: function (oEvt) {
                 var oResourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
-                var sBupla = this.getView().byId("br.com.dellavolpe.zuifimovcxfil::sap.suite.ui.generic.template.ListReport.view.ListReport::MovimentCxFilial--listReportFilter").getFilterData()["Bupla"];
+                var sBupla = this.getView().byId(this.getView().getId() + "--listReportFilter").getFilterData()["Bupla"];
                 if (sBupla === undefined) {
                     MessageBox.error(oResourceBundle.getText("selecionarFilial"));
                 } else {
