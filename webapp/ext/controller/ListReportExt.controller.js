@@ -1,10 +1,21 @@
-sap.ui.define([],
-    function () {
+sap.ui.define(["sap/m/MessageBox"],
+    function (MessageBox) {
         "use strict";
         return {
+
             openAppTab: function (oEvt) {
-                var oNavigationController = this.extensionAPI.getNavigationController();
-                oNavigationController.navigateExternal(oEvt.getSource().getId().substring(oEvt.getSource().getId().lastIndexOf("--") + 2));
+                var oResourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+                var sBupla = this.getView().byId("br.com.dellavolpe.zuifimovcxfil::sap.suite.ui.generic.template.ListReport.view.ListReport::MovimentCxFilial--listReportFilter").getFilterData()["Bupla"];
+                if (sBupla === undefined) {
+                    MessageBox.error(oResourceBundle.getText("selecionarFilial"));
+                } else {
+                    var oNavigationController = this.extensionAPI.getNavigationController();
+                    oNavigationController.navigateExternal(
+                        oEvt.getSource().getId().substring(oEvt.getSource().getId().lastIndexOf("--") + 2),
+                        {
+                            bupla: sBupla
+                        });
+                }
             },
 
             _refreshTable: function () {
