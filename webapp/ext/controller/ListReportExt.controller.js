@@ -13,7 +13,7 @@ sap.ui.define(["sap/m/MessageBox"],
                     oNavigationController.navigateExternal(
                         oEvt.getSource().getId().substring(oEvt.getSource().getId().lastIndexOf("--") + 2),
                         {
-                            bupla: sBupla
+                        //    bupla: sBupla
                         });
                 }
             },
