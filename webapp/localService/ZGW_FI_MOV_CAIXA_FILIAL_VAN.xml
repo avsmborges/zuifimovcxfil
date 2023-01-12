@@ -38,6 +38,9 @@
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Waers">
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
+            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType">
                 <Annotation Term="UI.HeaderInfo">
                     <Record>
@@ -141,22 +144,31 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>Bupla</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TotalBy">
+                            <Collection>
+                                <PropertyPath>Bupla</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
                         <PropertyPath>Bukrs</PropertyPath>
                         <PropertyPath>Bupla</PropertyPath>
-                        <PropertyPath>Hkont</PropertyPath>
-                        <PropertyPath>Gjahr</PropertyPath>
-                        <PropertyPath>Monat</PropertyPath>
                         <PropertyPath>Budat</PropertyPath>
-                        <PropertyPath>Blart</PropertyPath>
-                        <PropertyPath>Xblnr</PropertyPath>
-                        <PropertyPath>Zuonr</PropertyPath>
-                        <PropertyPath>Zdocumento</PropertyPath>
-                        <PropertyPath>Zdocestorno</PropertyPath>
-                        <PropertyPath>Lifnr</PropertyPath>
-                        <PropertyPath>Wrbtr</PropertyPath>
-                        <PropertyPath>Sgtxt</PropertyPath>
+                        <PropertyPath>Hkont</PropertyPath>
                     </Collection>
                 </Annotation>
             </Annotations>

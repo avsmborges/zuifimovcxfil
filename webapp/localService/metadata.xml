@@ -1,35 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
     </edmx:Reference>
-    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="http://dev:8070/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='S4ALIAS')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
         <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
     </edmx:Reference>
     <edmx:DataServices m:DataServiceVersion="2.0">
         <Schema Namespace="cds_zui_fi_mov_caixa_filial" xml:lang="pt" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
             <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="I_CompanyCodeVHType" sap:label="Empresa" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CompanyCodeName" sap:label="Empresa"/>
+                <Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Nome da firma" sap:quickinfo="Nome da firma ou empresa"/>
+                <Property Name="ControllingArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Área contab.custos" sap:quickinfo="Área de contabilidade de custos"/>
+                <Property Name="CityName" Type="Edm.String" MaxLength="25" sap:label="Local"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Chave do país/região"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Moeda" sap:quickinfo="Código da moeda" sap:semantics="currency-code"/>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Código de idioma"/>
+                <Property Name="ChartOfAccounts" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plano de contas"/>
+                <Property Name="FiscalYearVariant" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Variante exercício" sap:quickinfo="Variante de exercício"/>
+                <Property Name="Company" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Sociedade"/>
+                <Property Name="CreditControlArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Área controle créd." sap:quickinfo="Área de controle de créditos"/>
+                <Property Name="CountryChartOfAccounts" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plano de contas país" sap:quickinfo="Plano de contas do país"/>
+                <Property Name="FinancialManagementArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Área de AF" sap:quickinfo="Área de administração financeira"/>
+            </EntityType>
+            <EntityType Name="FiliasUsuarioType" sap:label="Search Help para Filiais do Usuário" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Branch"/>
+                </Key>
+                <Property Name="Branch" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="BranchName" sap:label="Local de negócios"/>
+                <Property Name="BranchName" Type="Edm.String" MaxLength="30" sap:label="Nome 1" sap:quickinfo="Nome"/>
+            </EntityType>
             <EntityType Name="ZI_FI_MOVIMENTO_VHType" sap:label="Value Help para Movimento" sap:value-list="true" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="DomainValue"/>
@@ -37,42 +62,112 @@
                 <Property Name="DomainValue" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="DomainText" sap:label="Valor inferior" sap:quickinfo="Valores p/domínios: valor ind./limite inferior"/>
                 <Property Name="DomainText" Type="Edm.String" MaxLength="60" sap:label="Descrição breve" sap:quickinfo="Texto breve para valores fixos"/>
             </EntityType>
-            <EntityType Name="MovimentCxFilialType" sap:label="Movimentação de Caixa Filial e Digitalização" sap:content-version="1">
+            <EntityType Name="MovimentCxFilialType" sap:semantics="aggregate" sap:label="Movimentação de Caixa Filial e Digitalização" sap:content-version="1">
                 <Key>
-                    <PropertyRef Name="Bukrs"/>
-                    <PropertyRef Name="Bupla"/>
-                    <PropertyRef Name="Zuonr"/>
-                    <PropertyRef Name="Monat"/>
-                    <PropertyRef Name="Gjahr"/>
-                    <PropertyRef Name="Lifnr"/>
-                    <PropertyRef Name="Budat"/>
-                    <PropertyRef Name="Blart"/>
-                    <PropertyRef Name="belnr"/>
+                    <PropertyRef Name="ID"/>
                 </Key>
-                <Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:required-in-filter="true" sap:label="Empresa"/>
-                <Property Name="Bupla" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="Znamefil" sap:label="Filial" sap:quickinfo="Local de negócios"/>
-                <Property Name="Zuonr" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Atribuição" sap:quickinfo="Nº atribuição"/>
-                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="NonNegative" sap:label="Mês" sap:quickinfo="Mês do exercício"/>
-                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Exercício"/>
-                <Property Name="Lifnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="Znamelifnr" sap:label="Fornecedor" sap:quickinfo="Nº conta do fornecedor"/>
-                <Property Name="Budat" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Data de lançamento" sap:quickinfo="Data de lançamento no documento"/>
-                <Property Name="Blart" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:label="Tipo de documento"/>
-                <Property Name="belnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Nº documento" sap:quickinfo="Nº documento de um documento contábil"/>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bukrs" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:required-in-filter="true" sap:label="Empresa" sap:value-list="standard"/>
+                <Property Name="Bupla" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:text="Znamefil" sap:label="Filial" sap:quickinfo="Local de negócios" sap:value-list="fixed-values"/>
+                <Property Name="Zuonr" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="Atribuição" sap:quickinfo="Nº atribuição"/>
+                <Property Name="Monat" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="NonNegative" sap:label="Mês" sap:quickinfo="Mês do exercício"/>
+                <Property Name="Gjahr" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="NonNegative" sap:label="Exercício"/>
+                <Property Name="Lifnr" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="Znamelifnr" sap:label="Fornecedor" sap:quickinfo="Nº conta do fornecedor"/>
+                <Property Name="Budat" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:label="Dt. Lançamento" sap:quickinfo="Data de lançamento no documento"/>
+                <Property Name="Blart" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Tipo Doc." sap:quickinfo="Tipo de documento"/>
+                <Property Name="belnr" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nº documento" sap:quickinfo="Nº documento de um documento contábil"/>
                 <Property Name="Znamefil" Type="Edm.String" MaxLength="30" sap:label="Nome 1" sap:quickinfo="Nome"/>
                 <Property Name="Znamelifnr" Type="Edm.String" MaxLength="35" sap:label="Nome" sap:quickinfo="Nome 1"/>
-                <Property Name="Xblnr" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:label="Referência" sap:quickinfo="Nº documento de referência"/>
-                <Property Name="Sgtxt" Type="Edm.String" MaxLength="50" sap:label="Texto" sap:quickinfo="Texto do item"/>
-                <Property Name="Wrbtr" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Waers" sap:label="Montante" sap:quickinfo="Montante em moeda do documento"/>
-                <Property Name="Hkont" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="Movimento" sap:label="Movimento" sap:quickinfo="Conta do Razão da contabilidade geral" sap:value-list="fixed-values"/>
+                <Property Name="Xblnr" Type="Edm.String" MaxLength="16" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Referência" sap:quickinfo="Nº documento de referência"/>
+                <Property Name="Sgtxt" Type="Edm.String" MaxLength="50" sap:aggregation-role="dimension" sap:label="Texto" sap:quickinfo="Texto do item"/>
+                <Property Name="Wrbtr" Type="Edm.Decimal" Precision="20" Scale="2" sap:aggregation-role="measure" sap:label="Valor" sap:filterable="false"/>
+                <Property Name="Hkont" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="Movimento" sap:label="Movimento" sap:quickinfo="Conta do Razão da contabilidade geral" sap:value-list="fixed-values"/>
                 <Property Name="Movimento" Type="Edm.String" MaxLength="60" sap:label="Descrição breve" sap:quickinfo="Texto breve para valores fixos"/>
-                <Property Name="Zdocestorno" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Doc. Estorno" sap:quickinfo="Nº documento de um documento contábil"/>
-                <Property Name="Zdocumento" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Número Documento" sap:quickinfo="Nº documento de um documento contábil"/>
-                <Property Name="Waers" Type="Edm.String" MaxLength="5" sap:label="Moeda" sap:quickinfo="Código da moeda" sap:semantics="currency-code"/>
+                <Property Name="Zdocestorno" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Doc. Estorno" sap:quickinfo="Nº documento de um documento contábil"/>
+                <Property Name="Zdocumento" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nro. Documento" sap:quickinfo="Nº documento de um documento contábil"/>
+                <Property Name="Waers" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Moeda" sap:quickinfo="Código da moeda" sap:semantics="currency-code"/>
             </EntityType>
             <EntityContainer Name="cds_zui_fi_mov_caixa_filial_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="I_CompanyCodeVH" EntityType="cds_zui_fi_mov_caixa_filial.I_CompanyCodeVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="FiliasUsuario" EntityType="cds_zui_fi_mov_caixa_filial.FiliasUsuarioType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZI_FI_MOVIMENTO_VH" EntityType="cds_zui_fi_mov_caixa_filial.ZI_FI_MOVIMENTO_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="MovimentCxFilial" EntityType="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
             </EntityContainer>
+            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Bukrs" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Empresa"/>
+                        <PropertyValue Property="CollectionPath" String="I_CompanyCodeVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Bukrs"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCodeName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CityName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Country"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Currency"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ChartOfAccounts"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="FiscalYearVariant"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Company"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CreditControlArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CountryChartOfAccounts"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="FinancialManagementArea"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.FilterDefaultValue" String="1000"/>
+            </Annotations>
+            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Bupla" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Loc.negócios"/>
+                        <PropertyValue Property="CollectionPath" String="FiliasUsuario"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Bupla"/>
+                                    <PropertyValue Property="ValueListProperty" String="Branch"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BranchName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Hkont" xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.ValueList">
                     <Record>
@@ -113,19 +208,46 @@
                 <Annotation Term="Capabilities.FilterRestrictions">
                     <Record>
                         <PropertyValue Property="RequiresFilter" Bool="true"/>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>ID</PropertyPath>
+                                <PropertyPath>Wrbtr</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
                         <PropertyValue Property="RequiredProperties">
                             <Collection>
                                 <PropertyPath>Bukrs</PropertyPath>
+                                <PropertyPath>Bupla</PropertyPath>
+                                <PropertyPath>Budat</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Bupla"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Budat"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>ID</PropertyPath>
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
-            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Bukrs" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.FilterDefaultValue" String="1000"/>
-            </Annotations>
-            <atom:link rel="self" href="http://10.1.16.41:8070/sap/opu/odata/sap/ZGW_FI_MOV_CAIXA_FILIAL/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
-            <atom:link rel="latest-version" href="http://10.1.16.41:8070/sap/opu/odata/sap/ZGW_FI_MOV_CAIXA_FILIAL/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Wrbtr" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <atom:link rel="self" href="http://dev:8070/sap/opu/odata/sap/ZGW_FI_MOV_CAIXA_FILIAL/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://dev:8070/sap/opu/odata/sap/ZGW_FI_MOV_CAIXA_FILIAL/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
