@@ -79,6 +79,10 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NrCheque"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Xblnr"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
@@ -99,6 +103,10 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Taxnum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Wrbtr"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
@@ -113,52 +121,9 @@
                         <PropertyValue Property="SortOrder">
                             <Collection>
                                 <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Budat"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
+                                    <PropertyValue Property="Property" PropertyPath="Wrbtr"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
                                 </Record>
-                                <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Gjahr"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
-                                </Record>
-                                <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Monat"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
-                                </Record>
-                                <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Bukrs"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
-                                </Record>
-                                <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Bupla"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
-                                </Record>
-                                <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Zdocumento"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
-                                </Record>
-                                <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="Zdocestorno"/>
-                                    <PropertyValue Property="Descending" Bool="false"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="UI.PresentationVariant">
-                    <Record>
-                        <PropertyValue Property="GroupBy">
-                            <Collection>
-                                <PropertyPath>Bupla</PropertyPath>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="TotalBy">
-                            <Collection>
-                                <PropertyPath>Bupla</PropertyPath>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="Visualizations">
-                            <Collection>
-                                <AnnotationPath>@UI.LineItem</AnnotationPath>
                             </Collection>
                         </PropertyValue>
                     </Record>

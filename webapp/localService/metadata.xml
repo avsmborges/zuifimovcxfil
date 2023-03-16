@@ -48,6 +48,26 @@
                 <Property Name="CountryChartOfAccounts" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plano de contas país" sap:quickinfo="Plano de contas do país"/>
                 <Property Name="FinancialManagementArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Área de AF" sap:quickinfo="Área de administração financeira"/>
             </EntityType>
+            <EntityType Name="AbertFechCaixaType" sap:label="Abertura e Fechamento de Caixa Filial" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Zempresa"/>
+                    <PropertyRef Name="Zfilial"/>
+                    <PropertyRef Name="Zperiodo"/>
+                    <PropertyRef Name="Zexercicio"/>
+                    <PropertyRef Name="Zdia"/>
+                    <PropertyRef Name="Zdiamesano"/>
+                </Key>
+                <Property Name="Zempresa" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Empresa"/>
+                <Property Name="Zfilial" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Loc.negócios" sap:quickinfo="Local de negócios"/>
+                <Property Name="Zperiodo" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="NonNegative" sap:label="Período contábil" sap:quickinfo="Mês do exercício"/>
+                <Property Name="Zexercicio" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Exercício"/>
+                <Property Name="Zdia" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="NonNegative" sap:label="Dia"/>
+                <Property Name="Zdiamesano" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Data de lançamento" sap:quickinfo="Data de lançamento no documento"/>
+                <Property Name="Zbloq" Type="Edm.String" MaxLength="1" sap:label="Bloqueado/Desbloquea" sap:quickinfo="Bloqueado/Desbloqueado"/>
+                <Property Name="DtGravacao" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Data"/>
+                <Property Name="HrGravacao" Type="Edm.Time" Precision="0" sap:label="Hora"/>
+                <Property Name="Usuario" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Nome do usuário"/>
+            </EntityType>
             <EntityType Name="FiliasUsuarioType" sap:label="Search Help para Filiais do Usuário" sap:value-list="true" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="Branch"/>
@@ -76,10 +96,12 @@
                 <Property Name="Budat" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:label="Dt. Lançamento" sap:quickinfo="Data de lançamento no documento"/>
                 <Property Name="Blart" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Tipo Doc." sap:quickinfo="Tipo de documento"/>
                 <Property Name="belnr" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nº documento" sap:quickinfo="Nº documento de um documento contábil"/>
+                <Property Name="NrCheque" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nº Cheque"/>
                 <Property Name="Znamefil" Type="Edm.String" MaxLength="30" sap:label="Nome 1" sap:quickinfo="Nome"/>
                 <Property Name="Znamelifnr" Type="Edm.String" MaxLength="35" sap:label="Nome" sap:quickinfo="Nome 1"/>
                 <Property Name="Xblnr" Type="Edm.String" MaxLength="16" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Referência" sap:quickinfo="Nº documento de referência"/>
                 <Property Name="Sgtxt" Type="Edm.String" MaxLength="50" sap:aggregation-role="dimension" sap:label="Texto" sap:quickinfo="Texto do item"/>
+                <Property Name="Taxnum" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="CPF/CNPJ" sap:quickinfo="Nº ID fiscal para parceiro de negócios"/>
                 <Property Name="Wrbtr" Type="Edm.Decimal" Precision="20" Scale="2" sap:aggregation-role="measure" sap:label="Valor" sap:filterable="false"/>
                 <Property Name="Hkont" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="Movimento" sap:label="Movimento" sap:quickinfo="Conta do Razão da contabilidade geral" sap:value-list="fixed-values"/>
                 <Property Name="Movimento" Type="Edm.String" MaxLength="60" sap:label="Descrição breve" sap:quickinfo="Texto breve para valores fixos"/>
@@ -89,9 +111,22 @@
             </EntityType>
             <EntityContainer Name="cds_zui_fi_mov_caixa_filial_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
                 <EntitySet Name="I_CompanyCodeVH" EntityType="cds_zui_fi_mov_caixa_filial.I_CompanyCodeVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="AbertFechCaixa" EntityType="cds_zui_fi_mov_caixa_filial.AbertFechCaixaType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="FiliasUsuario" EntityType="cds_zui_fi_mov_caixa_filial.FiliasUsuarioType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZI_FI_MOVIMENTO_VH" EntityType="cds_zui_fi_mov_caixa_filial.ZI_FI_MOVIMENTO_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="MovimentCxFilial" EntityType="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <FunctionImport Name="validateAberturaFechamento" ReturnType="cds_zui_fi_mov_caixa_filial.AbertFechCaixaType" EntitySet="AbertFechCaixa" m:HttpMethod="GET">
+                    <Parameter Name="Zempresa" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Empresa"/>
+                    <Parameter Name="Zfilial" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Loc.negócios"/>
+                    <Parameter Name="Zperiodo" Type="Edm.String" Mode="In" MaxLength="2" Nullable="true" sap:label="Período contábil"/>
+                    <Parameter Name="Zexercicio" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Exercício"/>
+                    <Parameter Name="Zdia" Type="Edm.String" Mode="In" MaxLength="2" Nullable="true" sap:label="Dia"/>
+                    <Parameter Name="Zdiamesano" Type="Edm.DateTime" Mode="In" Precision="0" Nullable="true" sap:label="Data de lançamento" sap:display-format="Date"/>
+                    <Parameter Name="Zbloq" Type="Edm.String" Mode="In" MaxLength="1" Nullable="true" sap:label="Bloqueado/Desbloquea"/>
+                    <Parameter Name="DtGravacao" Type="Edm.DateTime" Mode="In" Precision="0" Nullable="true" sap:label="Data" sap:display-format="Date"/>
+                    <Parameter Name="HrGravacao" Type="Edm.Time" Mode="In" Precision="0" Nullable="true" sap:label="Hora"/>
+                    <Parameter Name="Usuario" Type="Edm.String" Mode="In" MaxLength="12" Nullable="true" sap:label="Nome do usuário"/>
+                </FunctionImport>
             </EntityContainer>
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Bukrs" xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.ValueList">

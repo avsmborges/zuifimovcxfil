@@ -20,4 +20,4 @@ builder:
           name: ZUIFI_MOV_CX_FI
           description: Consulta Movimentação Caixa Filial
           package: ZUX
-          transport: FSDK900557
+          transport: FSDK900614

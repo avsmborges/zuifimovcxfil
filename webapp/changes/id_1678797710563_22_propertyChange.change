@@ -1,5 +1,5 @@
 {
-    "fileName": "id_1668017826577_318_propertyChange",
+    "fileName": "id_1678797710563_22_propertyChange",
     "fileType": "change",
     "changeType": "propertyChange",
     "moduleName": "",
@@ -7,10 +7,10 @@
     "packageName": "",
     "content": {
         "property": "width",
-        "newValue": "200px"
+        "newValue": "100px"
     },
     "selector": {
-        "id": "br.com.dellavolpe.zuifimovcxfil::sap.suite.ui.generic.template.ListReport.view.ListReport::MovimentCxFilial--listReport-Xblnr",
+        "id": "br.com.dellavolpe.zuifimovcxfil::sap.suite.ui.generic.template.ListReport.view.ListReport::MovimentCxFilial--listReport-NrCheque",
         "idIsLocal": false,
         "type": "sap.m.Column"
     },
@@ -18,7 +18,7 @@
     "texts": {},
     "namespace": "apps/br.com.dellavolpe.zuifimovcxfil/changes/",
     "projectId": "",
-    "creation": 1678801794554,
+    "creation": 1678801823440,
     "originalLanguage": "",
     "support": {
         "generator": "changeUtils: SAPFioriTools",
