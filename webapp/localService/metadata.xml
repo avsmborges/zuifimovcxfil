@@ -75,13 +75,6 @@
                 <Property Name="Branch" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="BranchName" sap:label="Local de negócios"/>
                 <Property Name="BranchName" Type="Edm.String" MaxLength="30" sap:label="Nome 1" sap:quickinfo="Nome"/>
             </EntityType>
-            <EntityType Name="ZI_FI_MOVIMENTO_VHType" sap:label="Value Help para Movimento" sap:value-list="true" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="DomainValue"/>
-                </Key>
-                <Property Name="DomainValue" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="DomainText" sap:label="Valor inferior" sap:quickinfo="Valores p/domínios: valor ind./limite inferior"/>
-                <Property Name="DomainText" Type="Edm.String" MaxLength="60" sap:label="Descrição breve" sap:quickinfo="Texto breve para valores fixos"/>
-            </EntityType>
             <EntityType Name="MovimentCxFilialType" sap:semantics="aggregate" sap:label="Movimentação de Caixa Filial e Digitalização" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="ID"/>
@@ -94,7 +87,7 @@
                 <Property Name="Gjahr" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="NonNegative" sap:label="Exercício"/>
                 <Property Name="Lifnr" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="Znamelifnr" sap:label="Fornecedor" sap:quickinfo="Nº conta do fornecedor"/>
                 <Property Name="Budat" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:label="Dt. Lançamento" sap:quickinfo="Data de lançamento no documento"/>
-                <Property Name="Blart" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Tipo Doc." sap:quickinfo="Tipo de documento"/>
+                <Property Name="Blart" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:label="Tipo Doc."/>
                 <Property Name="belnr" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nº documento" sap:quickinfo="Nº documento de um documento contábil"/>
                 <Property Name="NrCheque" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nº Cheque"/>
                 <Property Name="Znamefil" Type="Edm.String" MaxLength="30" sap:label="Nome 1" sap:quickinfo="Nome"/>
@@ -103,18 +96,32 @@
                 <Property Name="Sgtxt" Type="Edm.String" MaxLength="50" sap:aggregation-role="dimension" sap:label="Texto" sap:quickinfo="Texto do item"/>
                 <Property Name="Taxnum" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="CPF/CNPJ" sap:quickinfo="Nº ID fiscal para parceiro de negócios"/>
                 <Property Name="Wrbtr" Type="Edm.Decimal" Precision="20" Scale="2" sap:aggregation-role="measure" sap:label="Valor" sap:filterable="false"/>
-                <Property Name="Hkont" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="Movimento" sap:label="Movimento" sap:quickinfo="Conta do Razão da contabilidade geral" sap:value-list="fixed-values"/>
+                <Property Name="Hkont" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="Movimento" sap:label="Movimento" sap:quickinfo="Conta do Razão da contabilidade geral"/>
                 <Property Name="Movimento" Type="Edm.String" MaxLength="60" sap:label="Descrição breve" sap:quickinfo="Texto breve para valores fixos"/>
                 <Property Name="Zdocestorno" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Doc. Estorno" sap:quickinfo="Nº documento de um documento contábil"/>
                 <Property Name="Zdocumento" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Nro. Documento" sap:quickinfo="Nº documento de um documento contábil"/>
-                <Property Name="Waers" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Moeda" sap:quickinfo="Código da moeda" sap:semantics="currency-code"/>
+                <Property Name="Tipo" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension"/>
+            </EntityType>
+            <EntityType Name="CaixaFilialSaldoType" sap:label="Movimentação de Caixa Filial e Digitalização" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Bukrs"/>
+                    <PropertyRef Name="Bupla"/>
+                    <PropertyRef Name="Budat"/>
+                </Key>
+                <Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Empresa"/>
+                <Property Name="Bupla" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Loc.negócios" sap:quickinfo="Local de negócios"/>
+                <Property Name="Budat" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Data de lançamento" sap:quickinfo="Data de lançamento no documento"/>
+                <Property Name="VlrEntrada" Type="Edm.Decimal" Precision="15" Scale="2"/>
+                <Property Name="VlrSaida" Type="Edm.Decimal" Precision="15" Scale="2"/>
+                <Property Name="VlrSaldoAnterior" Type="Edm.Decimal" Precision="15" Scale="2"/>
+                <Property Name="VlrSaldoFinal" Type="Edm.Decimal" Precision="15" Scale="2"/>
             </EntityType>
             <EntityContainer Name="cds_zui_fi_mov_caixa_filial_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
                 <EntitySet Name="I_CompanyCodeVH" EntityType="cds_zui_fi_mov_caixa_filial.I_CompanyCodeVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="AbertFechCaixa" EntityType="cds_zui_fi_mov_caixa_filial.AbertFechCaixaType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="FiliasUsuario" EntityType="cds_zui_fi_mov_caixa_filial.FiliasUsuarioType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
-                <EntitySet Name="ZI_FI_MOVIMENTO_VH" EntityType="cds_zui_fi_mov_caixa_filial.ZI_FI_MOVIMENTO_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="MovimentCxFilial" EntityType="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <EntitySet Name="CaixaFilialSaldo" EntityType="cds_zui_fi_mov_caixa_filial.CaixaFilialSaldoType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <FunctionImport Name="validateAberturaFechamento" ReturnType="cds_zui_fi_mov_caixa_filial.AbertFechCaixaType" EntitySet="AbertFechCaixa" m:HttpMethod="GET">
                     <Parameter Name="Zempresa" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Empresa"/>
                     <Parameter Name="Zfilial" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Loc.negócios"/>
@@ -126,6 +133,15 @@
                     <Parameter Name="DtGravacao" Type="Edm.DateTime" Mode="In" Precision="0" Nullable="true" sap:label="Data" sap:display-format="Date"/>
                     <Parameter Name="HrGravacao" Type="Edm.Time" Mode="In" Precision="0" Nullable="true" sap:label="Hora"/>
                     <Parameter Name="Usuario" Type="Edm.String" Mode="In" MaxLength="12" Nullable="true" sap:label="Nome do usuário"/>
+                </FunctionImport>
+                <FunctionImport Name="getValoresSaldo" ReturnType="cds_zui_fi_mov_caixa_filial.CaixaFilialSaldoType" EntitySet="CaixaFilialSaldo" m:HttpMethod="GET">
+                    <Parameter Name="Bukrs" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Empresa"/>
+                    <Parameter Name="Bupla" Type="Edm.String" Mode="In" MaxLength="4" Nullable="true" sap:label="Loc.negócios"/>
+                    <Parameter Name="Budat" Type="Edm.DateTime" Mode="In" Precision="0" Nullable="true" sap:label="Data de lançamento" sap:display-format="Date"/>
+                    <Parameter Name="VlrEntrada" Type="Edm.Decimal" Mode="In" Precision="15" Scale="2" Nullable="true"/>
+                    <Parameter Name="VlrSaida" Type="Edm.Decimal" Mode="In" Precision="15" Scale="2" Nullable="true"/>
+                    <Parameter Name="VlrSaldoAnterior" Type="Edm.Decimal" Mode="In" Precision="15" Scale="2" Nullable="true"/>
+                    <Parameter Name="VlrSaldoFinal" Type="Edm.Decimal" Mode="In" Precision="15" Scale="2" Nullable="true"/>
                 </FunctionImport>
             </EntityContainer>
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Bukrs" xmlns="http://docs.oasis-open.org/odata/ns/edm">
@@ -196,27 +212,6 @@
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="BranchName"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Hkont" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="Conta do Razão"/>
-                        <PropertyValue Property="CollectionPath" String="ZI_FI_MOVIMENTO_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="false"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Hkont"/>
-                                    <PropertyValue Property="ValueListProperty" String="DomainValue"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="DomainText"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>

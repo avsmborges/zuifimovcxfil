@@ -35,9 +35,6 @@
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Movimento">
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/Waers">
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
             <Annotations Target="cds_zui_fi_mov_caixa_filial.MovimentCxFilialType/ID">
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
@@ -50,10 +47,6 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Bukrs"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Bupla"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
@@ -111,6 +104,10 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Tipo"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Sgtxt"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
@@ -126,6 +123,12 @@
                                 </Record>
                             </Collection>
                         </PropertyValue>
+                        <PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>Tipo</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="InitialExpansionLevel" Int="1"/>
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.SelectionFields">
@@ -133,7 +136,6 @@
                         <PropertyPath>Bukrs</PropertyPath>
                         <PropertyPath>Bupla</PropertyPath>
                         <PropertyPath>Budat</PropertyPath>
-                        <PropertyPath>Hkont</PropertyPath>
                     </Collection>
                 </Annotation>
             </Annotations>

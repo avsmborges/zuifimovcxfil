@@ -34,6 +34,10 @@
                     "semanticObject": "ZUIFI_VF_PAMC",
                     "action": "display"
                 },
+                "ZUIFI_PG_AVULSO-display": {
+                    "semanticObject": "ZUIFI_PG_AVULSO",
+                    "action": "display"
+                },
                 "WD-ZWDFI_ADTOVF": {
                     "semanticObject": "WD",
                     "action": "ZWDFI_ADTOVF"
@@ -136,6 +140,12 @@
                                     "openPagamento": {
                                         "id": "ZUIFI_VF_PGTOS-display",
                                         "text": "Pagamento",
+                                        "press": "openAppTab",
+                                        "requiresSelection": false
+                                    },
+                                    "openPagamentoAvulso": {
+                                        "id": "ZUIFI_PG_AVULSO-display",
+                                        "text": "Pagamento Avulso",
                                         "press": "openAppTab",
                                         "requiresSelection": false
                                     }

@@ -1,0 +1,38 @@
+<HBox xmlns="sap.m" justifyContent="End" >
+	<Label text="Saldo Anterior:" design="Bold" class="sapUiSmallMarginBegin sapUiTinyMarginEnd" />
+				<Text text="{ path: 'FooterModel>/SaldoAnterior', 
+						type: 'sap.ui.model.odata.type.Decimal',
+						formatOptions: {
+						minIntegerDigits: 1,
+						minFractionDigits: 2,
+						maxFractionDigits: 2,
+						groupingEnabled: true
+						} } " />
+	<Label text="Entrada:" design="Bold" class="sapUiSmallMarginBegin sapUiTinyMarginEnd" />
+				<Text text="{ path: 'FooterModel>/Entrada', 
+						type: 'sap.ui.model.odata.type.Decimal',
+						formatOptions: {
+						minIntegerDigits: 1,
+						minFractionDigits: 2,
+						maxFractionDigits: 2,
+						groupingEnabled: true
+						} } " />
+	<Label text="Saída:" design="Bold" class="sapUiSmallMarginBegin sapUiTinyMarginEnd" />
+				<Text text="{ path: 'FooterModel>/Saida', 
+						type: 'sap.ui.model.odata.type.Decimal',
+						formatOptions: {
+						minIntegerDigits: 1,
+						minFractionDigits: 2,
+						maxFractionDigits: 2,
+						groupingEnabled: true
+						} } " />
+	<Label text="Saldo Final:" design="Bold" class="sapUiSmallMarginBegin sapUiTinyMarginEnd" />
+				<Text text="{ path: 'FooterModel>/SaldoFinal', 
+						type: 'sap.ui.model.odata.type.Decimal',
+						formatOptions: {
+						minIntegerDigits: 1,
+						minFractionDigits: 2,
+						maxFractionDigits: 2,
+						groupingEnabled: true
+						} } " />
+	</HBox>
